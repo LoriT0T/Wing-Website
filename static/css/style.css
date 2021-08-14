@@ -1,70 +1,101 @@
 @import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap); 
 @import url(https://fonts.googleapis.com/css2?family=Arvo&display=swap);
 @import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css); 
+@import url(https://fonts.googleapis.com/css2?family=Arvo&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Schoolbell&display=swap);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
 
 html, body {
   width:100%;
   margin:auto;
-  min-width:600px;
   max-width:2000px;
-  font-family: 'Josefin Sans', sans-serif;
   box-sizing: border-box;
-  overflow-x: hidden;
+  font-family: 'Arvo', serif;
 }
 
-.gradient-background{
-  background: linear-gradient(90deg, rgb(49, 210, 255) 4%, rgba(232,95,187,1) 74%);
-}
-
-.gradient-border-purple, .slider-button {
+.gradient-border-purple {
   border: 1px solid transparent;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #d53a3a, #75d8ff);
 }
 
-.gradient-text, .wing-text, .categories, .yo {
-  font-size: 72px;
-  background: -webkit-linear-gradient(90deg,  rgb(57, 212, 255) 4%, rgba(232,95,187,1) 74%);
+.wing-text {
+  position: absolute;
+  top: 0px;
+  left: 100px;
+  height: 10%;
+  font-size: 60px;
+  color: #006DA2;
+}
+
+.logo {
+  position: absolute;
+  top: 0px;
+}
+
+.wing-text:hover {
+  background: -webkit-linear-gradient(89.9deg, #5FCAE8 0.12%, #ED65A0 99.95%);
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.search {
-  margin-left: -22px;
-  position: absolute;
-  border-bottom-left-radius: 10px;
-  border-top-left-radius: 10px;
+input {
+  width: 13%;
+  height: 5%;
 }
 
 .search-bar {
-  margin-bottom:-40px ;
-  position: relative;
-}
-
-.header-top {
   text-align: center;
+  position: relative;
+  top: 50px;
+  font-size: 150%;
 }
 
-.wing-text {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 45px;
+.search {
+  border: 1px solid transparent;
+  height: 2px;
+  background: #006080;
+  margin-left: -1.5%;
+  position: absolute;
+  height: 100%;
+  width: 1.5%;
+}
+
+.search:hover {
+  background: linear-gradient(90deg, rgb(49, 210, 255) 4%, rgba(232,95,187,1) 74%);
 }
 
 .categories span {
-  font-weight: bold;
-  font-size: 40px;
+  font-size: 32px;
   display: inline-block;
 }
 
+.boys, .girls, .infants {
+  color: #006080;
 
- 
+}
+
+.sale {
+  color: black;
+}
+
 /* language menu start 
 --------------------------- */
 header {
   position: absolute;
   height: 110px;
   padding: 10px 0;
+  top: 15px;
 }
 
 .logo {
@@ -103,6 +134,7 @@ nav {
   cursor: pointer;
   display: flex;
   justify-content: space-around;
+  font-size: large;
   line-height: 2;
 }
 
@@ -180,8 +212,8 @@ a {
 
 
 hr {
-  margin-bottom: 0;
-  margin-top: 0;
+  margin-bottom: 100px;
+  margin-top: 150px;
   width: 100%;
   border: 1px solid ;
   border-image-slice: 1;
@@ -189,47 +221,8 @@ hr {
   height: 2px;
   background: linear-gradient(to left, #e70ab7, #5ed1ff);
 }
- 
-/* shop by categories
------------------------- */
-.shop-by-category {
-  text-align: center;
-  margin: 0 auto;
-  width: 95%;
-}
 
-.category-first-row, .category-second-row {
-  justify-content: space-around;
-  display: flex;
-  flex-direction: row;
-}
-
-.category-first-row img, .category-second-row img {
-  display: block;
-  margin: 0 auto;
-  width: 290px;
-  margin-bottom: 5px;
-  border: 1px solid transparent;
-  border-radius: 50%;
-}
-
-.category-first-row span, .category-second-row span {
-  color: white;
-  font-family: 'Arvo', serif;
-  font-size: larger;
-  background: linear-gradient(90deg, rgba(46,198,241,1) 4%, rgba(232,95,187,1) 74%);
-  padding: 0 100px 0 100px;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px; 
-}
-
-.category-second-row span {
-  padding: 0 100px 0 100px;
-}
-
-
-
-/* slider 
+/* Slider Begin
 ------------------- */
 
 .wrapper {
@@ -306,6 +299,63 @@ hr {
   background: linear-gradient(90deg, rgb(49, 210, 255) 4%, rgba(232,95,187,1) 74%); 
   border: 1px solid lightgray;
 }
+/* Slider Ends
+------------------- */
+ 
+/* Shop by Categories Begins 
+------------------------------- */
+h4 {
+  font-family: "Arvo", sans-serif;
+  font-weight: 400;
+  color: #006080;
+  font-size: 4rem;
+}
+
+.category {
+  width: 42.3rem;
+  margin: auto;
+  cursor: pointer;
+  position: relative;
+}
+.category-title {
+  text-align: center;
+  background-color: #efefef;
+  border-radius: 0 0 4.4rem 4.4rem;
+  padding: 1.5rem 0;
+  width: 100%;
+  position: absolute;
+  left: 0%;
+  top: 38.7rem;
+}
+.category img {
+  border-radius: 4.4rem 4.4rem 0 0;
+}
+
+.category:hover .category-title {
+  background: linear-gradient(89.9deg, #5fcae8 0.12%, #ed65a0 99.95%);
+}
+.category:hover .category-title h4 {
+  color: white;
+}
+
+.cat-row1 {
+  display: flex;
+}
+.cat-row2 {
+  display: flex;
+  margin-top: 10rem;
+  margin-bottom: 15rem;
+}
+
+.categories {
+  margin-top: 150px;
+  margin-bottom: -130px;
+} 
+/* Shop by Categories Ends 
+------------------------------- */
+
+
+
 
 .down-arrow {
   text-align: center;
@@ -384,19 +434,6 @@ section:nth-child(even) {
   background-color: #000 !important;
 }
 
-/* Parallex Gradient on Scroll
-----------------------------------*/
-
-.all-content:before{
-	content:'';
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	width: 200%;
-	z-index: -1;
-	
-}
-
 /* Animation On Load 
 ------------------------*/
 
@@ -451,8 +488,4 @@ hr,  .categories {
 
 .wrapper, .down-arrow {
   animation: transitionTop 1s ease-in;
-}
-
-.text-logo {
-  animation: transitionBot 1s ease-out;
 }
