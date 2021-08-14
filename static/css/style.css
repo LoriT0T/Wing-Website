@@ -1,0 +1,458 @@
+@import url(https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200&display=swap); 
+@import url(https://fonts.googleapis.com/css2?family=Arvo&display=swap);
+@import url(https://necolas.github.io/normalize.css/8.0.1/normalize.css); 
+
+html, body {
+  width:100%;
+  margin:auto;
+  min-width:600px;
+  max-width:2000px;
+  font-family: 'Josefin Sans', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.gradient-background{
+  background: linear-gradient(90deg, rgb(49, 210, 255) 4%, rgba(232,95,187,1) 74%);
+}
+
+.gradient-border-purple, .slider-button {
+  border: 1px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #d53a3a, #75d8ff);
+}
+
+.gradient-text, .wing-text, .categories, .yo {
+  font-size: 72px;
+  background: -webkit-linear-gradient(90deg,  rgb(57, 212, 255) 4%, rgba(232,95,187,1) 74%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.search {
+  margin-left: -22px;
+  position: absolute;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.search-bar {
+  margin-bottom:-40px ;
+  position: relative;
+}
+
+.header-top {
+  text-align: center;
+}
+
+.wing-text {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 45px;
+}
+
+.categories span {
+  font-weight: bold;
+  font-size: 40px;
+  display: inline-block;
+}
+
+
+ 
+/* language menu start 
+--------------------------- */
+header {
+  position: absolute;
+  height: 110px;
+  padding: 10px 0;
+}
+
+.logo {
+  width: 100px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+nav {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang-menu img {
+  margin: 5px;
+}
+
+
+.lang-menu {
+  color: rgb(0, 0, 0);
+  display: flex;
+  margin-top: 25px;
+  margin-left: 600px;
+  position: absolute;
+  left: 100%;
+  z-index: 1;
+  justify-content: space-between;
+}
+
+
+.selected-lang {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-around;
+  line-height: 2;
+}
+
+.selected-lang:before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url(https://www.countryflags.io/us/flat/32.png);
+}
+
+
+.lang-menu ul {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  border: 1px solid #f8f8f8;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+.lang-menu ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang-menu ul li a {
+  width: 140px;
+  display: block;
+  padding: 5px 10px;
+}
+
+.lang-menu ul li a:hover {
+  background-color: #f2f2f2;
+}
+
+.lang-menu ul li a:before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+  margin-right: 10px;
+  
+} 
+
+.lang-menu:hover ul {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+.de:before {
+  background-image: url(https://www.countryflags.io/de/flat/32.png);
+}
+
+.en:before {
+  background-image: url(https://www.countryflags.io/us/flat/32.png);
+}
+
+.ar:before {
+  background-image: url(https://www.countryflags.io/ae/flat/32.png);
+}
+
+.fr:before {
+  background-image: url(https://www.countryflags.io/fr/flat/32.png);
+}
+
+
+hr {
+  margin-bottom: 0;
+  margin-top: 0;
+  width: 100%;
+  border: 1px solid ;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #f123c5, #67d4ff);
+  height: 2px;
+  background: linear-gradient(to left, #e70ab7, #5ed1ff);
+}
+ 
+/* shop by categories
+------------------------ */
+.shop-by-category {
+  text-align: center;
+  margin: 0 auto;
+  width: 95%;
+}
+
+.category-first-row, .category-second-row {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+}
+
+.category-first-row img, .category-second-row img {
+  display: block;
+  margin: 0 auto;
+  width: 290px;
+  margin-bottom: 5px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+}
+
+.category-first-row span, .category-second-row span {
+  color: white;
+  font-family: 'Arvo', serif;
+  font-size: larger;
+  background: linear-gradient(90deg, rgba(46,198,241,1) 4%, rgba(232,95,187,1) 74%);
+  padding: 0 100px 0 100px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px; 
+}
+
+.category-second-row span {
+  padding: 0 100px 0 100px;
+}
+
+
+
+/* slider 
+------------------- */
+
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.slides-container {
+  height: 500px;
+  transition: 900ms cubic-bezier(0.48, 0.15, 0.18, 1);
+  position: relative;
+}
+
+.slide-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.next-btn, .prev-btn {
+  color: white;
+  background: linear-gradient(90deg, rgb(49, 210, 255) 4%, rgba(232,95,187,1) 74%);
+  padding: 10px;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.6);
+  z-index: 10;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.next-btn:hover, .prev-btn:hover {
+  background-color: #5ed1ff;
+}
+
+.prev-btn {
+  left: 0;
+}
+
+.next-btn {
+  right:0;
+}
+
+.navigation-dots {
+  position: relative;
+  bottom: 55px;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  justify-content: center; 
+}
+
+.single-dot {
+  border: 1px solid transparent;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #d53a3a, #75d8ff);
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.single-dot.active {
+  background: linear-gradient(90deg, rgb(49, 210, 255) 4%, rgba(232,95,187,1) 74%); 
+  border: 1px solid lightgray;
+}
+
+.down-arrow {
+  text-align: center;
+}
+
+.down-arrow img{
+  z-index: 1;
+  position: relative;
+  margin-top: -50px;
+  height: 50px;
+  border: 1% solid transparent;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgb(0, 0, 0, 0.6);
+}
+
+/* CSS FIXED CONIC FILL ON SCROLL
+----------------------------------- */
+ .fill-scroll {
+  font-size: 50px;
+  background: conic-gradient(
+  from 90deg at 50% 50%, rgb(241, 241, 241) 50%, rgb(255, 1, 170) 80%) fixed;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* Reveal Content on Scroll 
+------------------------------ */
+section:nth-child(odd) {
+  background-color: darkslateblue;
+  color:rgb(255, 255, 255);
+}
+
+section:nth-child(even) {
+  color:#1D212B;
+  background: #fff;
+}
+
+.container {
+  margin: 100px;
+}
+
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease; 
+}
+
+.reveal.active {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+/* Brands Slider Begins 
+--------------------------*/
+.brand-carousel {
+  background: aliceblue;
+}
+.owl-dots {
+  text-align: center;
+  margin-top: 4%;
+}
+.owl-dot {
+  display: inline-block;
+  height: 15px !important;
+  width: 15px !important;
+  background-color: #878787 !important;
+  opacity: 0.8;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+.owl-dot.active {
+  background-color: #000 !important;
+}
+
+/* Parallex Gradient on Scroll
+----------------------------------*/
+
+.all-content:before{
+	content:'';
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 200%;
+	z-index: -1;
+	
+}
+
+/* Animation On Load 
+------------------------*/
+
+/* from bottom to top  */
+@keyframes transitionTop {
+  0% {
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* From Top to Bot*/
+@keyframes transitionBot {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* from right to left */
+@keyframes transitionRight {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* from left to right */
+@keyframes transitionLeft {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+hr,  .categories {
+  animation: transitionLeft 1s ease-in-out;
+}
+
+.wrapper, .down-arrow {
+  animation: transitionTop 1s ease-in;
+}
+
+.text-logo {
+  animation: transitionBot 1s ease-out;
+}
