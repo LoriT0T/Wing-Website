@@ -498,10 +498,6 @@ hr, .categories {
 
 /*Featured Products Begins
 ----------------------------*/
-.featured-products {
-
-}
-
 .featured-products h2{
   z-index: 1;
   position: absolute;
@@ -561,3 +557,45 @@ hr, .categories {
 }
 /* Brands Slider Ends 
 --------------------------*/
+.footer {
+  font-family: 'Arvo', serif;
+  width: 15%;
+  position: absolute;
+  margin-top: -5%;
+  margin-left: 3%;
+}
+
+.footer h6 {
+  color: #00A7DD;
+  font-size: 72px;
+}
+
+.footer p {
+  font-size: 16px;
+}
+
+.socials {
+  align-items: center;
+  display: flex;
+  column-gap: 10%;
+  margin: 5%;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+a {
+  color: #000;
+}
+
+.footer-menu {
+  display: flex;
+  column-gap: 10%;
+  width: 500%;
+  position: absolute;
+  font-size: 24px;
+  left: 200%;
+  bottom: 7%;
+}
