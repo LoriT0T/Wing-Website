@@ -288,10 +288,11 @@ hr {
 }
 
 .navigation-dots {
-  position: relative;
-  bottom: 55px;
+  position: absolute;
+  bottom: 9%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  height: 32px;
   align-items: center;
   justify-content: center;
 }
@@ -322,8 +323,9 @@ hr {
 .down-arrow img {
   z-index: 1;
   position: absolute;
-  bottom: 4%;
-  left: 49%;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
   height: 50px;
   border: 1% solid transparent;
   background: white;
@@ -361,7 +363,8 @@ h4 {
   width: var(--category-width);
   height: calc(var(--category-width) * calc(387 / 423));
   /* margin: auto; */
-  margin-top: 10rem;
+  /* Will include the height of the category title */
+  margin-bottom: calc(0.2016 * var(--category-width) * calc(387 / 423));
   cursor: pointer;
   position: relative;
 }
@@ -402,11 +405,10 @@ h4 {
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     "cat1 cat2 cat3 cat4"
-    "cat5 cat6 cat7 cat8"
-    ". . . ."
-    ". . . .";
+    "cat5 cat6 cat7 cat8";
   justify-items: center;
   column-gap: 2rem;
+  row-gap: 10rem;
   /* gap: 1rem; */
 }
 
@@ -449,8 +451,7 @@ h4 {
 }
 
 .categories {
-  margin-top: 150px;
-  margin-bottom: -130px;
+  margin-top: 15rem;
 }
 /* Shop by Categories Ends 
 ------------------------------- */
@@ -571,19 +572,47 @@ hr,
 /*Featured Products Begins
 ----------------------------*/
 .featured-products h2 {
-  z-index: 1;
-  position: absolute;
-  top: 2000px;
-  left: 40%;
+  padding: 6rem 0;
+  text-align: center;
   color: #006080;
   font-family: "Roboto", sans-serif;
   font-size: 40px;
 }
 
-.product-row1,
+/* .product-row1,
 .product-row2 {
   display: flex;
   justify-content: space-around;
+} */
+
+.featured-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "prod1 prod2 prod3"
+    "prod4 prod5 prod6";
+}
+.product {
+  text-align: center;
+}
+.prod1 {
+  grid-area: prod1;
+}
+.prod2 {
+  grid-area: prod2;
+}
+.prod3 {
+  grid-area: prod3;
+}
+.prod4 {
+  grid-area: prod4;
+}
+.prod5 {
+  grid-area: prod5;
+}
+.prod6 {
+  grid-area: prod6;
 }
 
 .product-row2 {
