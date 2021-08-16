@@ -8,80 +8,63 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    
     <title>Wing | Baby Shop | Home</title>
 </head>
 <body>
     
     <div class="all-content">
+
+      <header>
+        <!-- Breaks when header-top removed. -->
+        <div class="header-top">
+          <div class="text-logo">
+            <img src="img/wing-logo.png" alt="Wing logo" class="logo">
+            <h1 class="wing-text">wing</h1>
+          </div>
+
+          <div class="search-bar">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search..." name="search" class="gradient-border-purple" id="item" maxlength="100">
+                <img src="img/search.png" alt="search" class="search">
+            </form>
+          </div>
+
+          <!------ Language Menu Begins ------>
         
-                      <!-------- Header Content Begins  ---------->
-                  <div class="header-flex">
-                      <div class="header-top">
-
-                        <div class="text-logo">
-                          <img src="img/wing-logo.png" alt="Wing logo" class="logo">
-                          <h1 class="wing-text">wing</h1>
-                        </div>
-
-                        <div class="search-bar">
-                          <form action="/action_page.php">
-                              <input type="text" placeholder="Search.." name="search" class="gradient-border-purple" id="item" maxlength="100">
-                              <img src="img/search.png" alt="search" class="search">
-                          </form>
-                        </div>
-
-                      </div>
-
-                        
-
-                       <!------ Language Menu Begins ------>
-                        <div class="top-header">
-                        
-                      <header>
-                        <nav>
-                          <div class="lang-menu">
-                            <div class="selected-lang">
-                                English
-                            </div>
-                            <a href="#"></a><img src="img/arrow-down-short.svg" alt="" class="arrow"></a>
-                            <ul>
-                                <li>
-                                    <a class="de" href="de">German</a>
-                                </li>
-                                <li>
-                                    <a class="fr" href="fr">French</a>
-                                </li>
-                                <li>
-                                    <a class="ar" href="ar">Arabic</a>
-                                </li>
-                                <li>
-                                    <a class="en" href="en">English</a>
-                                </li>
-                            </ul>
-                          </div>
-                        </nav>
-                      </header>
-                      <div class="options">
-                        <a href="checkout"><img src="img/person.png" alt="Checkout" class="checkout" width="25"></a>
-                        <a href="profile"><img src="img/shopping_cart.png" alt="Profile" class="profile" width="25"></a>
-                      </div> 
-                    </div>
-                  </div>
-                      <!------ Language Menu Ends ------>
-                      <div class="shopping-categories">
-                        <a href="#1"><span class="boys">Boys &nbsp;</span></a>
-                        <a href="#2"><span class="girls">Girls &nbsp;</span></a>
-                        <a href="#3"><span class="infants">Infants &nbsp;</span></a>
-                        <a href="#4"><span class="sale">Sale</span></a>
-                      </div>
-          
-
-                       <!-------- Header Content Ends  ---------->
+          <div class="lang-menu">
+            <div class="selected-lang">
+                English
+            </div>
+            <a href="#"></a><img src="img/arrow-down-short.svg" alt="" class="arrow"></a>
+            <a href="checkout"><img src="img/person.png" alt="Checkout" class="checkout" width="25"></a>
+            <a href="profile"><img src="img/shopping_cart.png" alt="Profile" class="profile" width="25"></a>
+            <ul>
+                <li>
+                    <a class="de" href="de">German</a>
+                </li>
+                <li>
+                    <a class="fr" href="fr">French</a>
+                </li>
+                <li>
+                    <a class="ar" href="ar">Arabic</a>
+                </li>
+                <li>
+                    <a class="en" href="en">English</a>
+                </li>
+            </ul>
+          </div>
 
         
-        <hr />
+      </div>
+    </header>
+    <hr>
 
         <!------ Slider Begins ------>
         <div class="wrapper">
@@ -121,89 +104,86 @@
         </div>
         
         <!-------- Shopping By Category Begins ---------->
-        <div class="shopping-categories">
-            <div class="cat-row1 reveal">
-              <h2>SHOP BY CATEGORY</h2>
-              <div class="category">
-                <div class="category-image">
-                  <img
-                    src="img/girls-clothing.png"
-                    alt="Girls clothing category image"
-                  />
-                  <div class="category-title">
-                    <h4>Girls Clothing</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="category">
-                <div class="category-image">
-                  <img
-                    src="img/boys-clothing.png"
-                    alt="Boys clothing category image"
-                  />
-                  <div class="category-title">
-                    <h4>Boys Clothing</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="category">
-                <div class="category-image">
-                  <img
-                    src="img/boys-shoes.png"
-                    alt="Boys shoes"
-                  />
-                  <div class="category-title">
-                    <h4>Boys Shoes</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="category">
-                <div class="category-image">
-                  <img src="img/girls-shoes.png" alt="Girls shoes" />
-                  <div class="category-title">
-                    <h4>Girls Shoes</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cat-row2 reveal">
-              <div class="category">
-                <div class="category-image">
-                  <img src="img/cribs.png" alt="Cribs" />
-                  <div class="category-title">
-                    <h4>Cribs</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="category">
-                <div class="category-image">
-                  <img
-                    src="img/strollers.png"
-                    alt="Stroller"
-                  />
-                  <div class="category-title">
-                    <h4>Strollers</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="category">
-                <div class="category-image">
-                  <img src="img/car-seats.png" />
-                  <div class="category-title">
-                    <h4>Car Seats</h4>
-                  </div>
-                </div>
-              </div>
-              <div class="category">
-                <div class="category-image">
-                  <img src="img/cutlers.png" alt="Children's Cutlery" />
-                  <div class="category-title">
-                    <h4>Cutlery</h4>
-                  </div>
-                </div>
-              </div>
+        <div class="categories">
+          <div class="category category-1">
+            <img
+              class="category-image"
+              src="./img/boys-clothing.png"
+              alt="Boys clothing category image"
+            />
+            <div class="category-title">
+              <h4>Boys Clothing</h4>
             </div>
           </div>
+          <div class="category category-2">
+            <img
+              class="category-image"
+              src="./img/girls-clothing.png"
+              alt="Girls clothing category image"
+            />
+
+            <div class="category-title">
+              <h4>Girls Clothing</h4>
+            </div>
+          </div>
+          <div class="category category-3">
+            <img
+              class="category-image"
+              src="./img/boys-shoes.png"
+              alt="Boys shoes"
+            />
+            <div class="category-title">
+              <h4>Boys Shoes</h4>
+            </div>
+          </div>
+          <div class="category category-4">
+            <img
+              class="category-image"
+              src="./img/girls-shoes.png"
+              alt="Girls shoes"
+            />
+
+            <div class="category-title">
+              <h4>Girls Shoes</h4>
+            </div>
+          </div>
+
+          <div class="category category-5">
+            <img class="category-image" src="./img/cribs.png" alt="Cribs" />
+            <div class="category-title">
+              <h4>Cribs</h4>
+            </div>
+          </div>
+
+          <div class="category category-6">
+            <img
+              class="category-image"
+              src="./img/Strollers.png"
+              alt="Stroller"
+            />
+            <div class="category-title">
+              <h4>Strollers</h4>
+            </div>
+          </div>
+
+          <div class="category category-7">
+            <img class="category-image" src="./img/car-seats.png" />
+            <div class="category-title">
+              <h4>Car Seats</h4>
+            </div>
+          </div>
+          <div class="category category-8">
+            <img
+              class="category-image"
+              src="./img/Cutlers.png"
+              alt="Children's Cutlery"
+            />
+
+            <div class="category-title">
+              <h4>Cutlery</h4>
+            </div>
+          </div>
+        </div>    
         <!-------- Shopping By Category Ends ---------->
 
         <!------------- Featured Products Begins ---------------->
@@ -294,30 +274,30 @@
             </div>
           </div>
         <!-------- Feauterd Brands Ends ---------->
+          <hr>
 
-        <hr>
-          
-          <div class="footer">
-
+          <footer>
+            <div class="footer-block">
               <h6>wing</h6>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo arcu, malesuada ut congue at, tincidunt in diam.</p>
 
-            <div class="socials">
-              <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
-              <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
-              <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+              <div class="social-icons">
+                <a href="#"><img src="img/instagram-icon.png" alt="Instagram"></a>
+                <a href="#"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                <a href="#"><img src="img/facebook-icon.png" alt="Facebook"></a>
+              </div>
             </div>
 
             <div class="footer-menu">
               <ul>
-                <a href=""><li>Customer Service</li></a>
-                <a href=""><li>Returns</li></a>
-                <a href=""><li>Contact us</li></a>
-                <a href=""><li>FAQs</li></a>
+                <li>Customer Service</li>
+                <li>Returns</li>
+                <li>Contact us</li>
+                <li>FAQs</li>
               </ul>
             </div>
 
-          </div>
+          </footer>
         
     </div>
     <script src="js/js.js"></script>
