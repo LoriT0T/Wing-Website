@@ -301,10 +301,11 @@ hr {
 }
 
 .navigation-dots {
-  position: relative;
-  bottom: 55px;
+  position: absolute;
+  bottom: 9%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  height: 32px;
   align-items: center;
   justify-content: center;
 }
@@ -341,7 +342,11 @@ hr {
 .down-arrow img {
   z-index: 1;
   position: absolute;
+<<<<<<< HEAD
   bottom: 29px;
+=======
+  bottom: 0;
+>>>>>>> dc0fc52d246f3bdf88e724ba5acd54fe8672190d
   left: 50%;
   transform: translate(-50%, 50%);
   height: 50px;
@@ -383,7 +388,8 @@ html {
   width: var(--category-width);
   height: calc(var(--category-width) * calc(387 / 423));
   /* margin: auto; */
-  margin-top: 10rem;
+  /* Will include the height of the category title */
+  margin-bottom: calc(0.2016 * var(--category-width) * calc(387 / 423));
   cursor: pointer;
   position: relative;
 }
@@ -426,12 +432,15 @@ html {
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
     "cat1 cat2 cat3 cat4"
-    "cat5 cat6 cat7 cat8"
-    ". . . ."
-    ". . . .";
+    "cat5 cat6 cat7 cat8";
   justify-items: center;
   column-gap: 2rem;
+<<<<<<< HEAD
   margin-bottom: 130px;
+=======
+  row-gap: 10rem;
+  /* gap: 1rem; */
+>>>>>>> dc0fc52d246f3bdf88e724ba5acd54fe8672190d
 }
 
 .category-1 {
@@ -476,6 +485,12 @@ html {
   }
 }
 
+<<<<<<< HEAD
+=======
+.categories {
+  margin-top: 15rem;
+}
+>>>>>>> dc0fc52d246f3bdf88e724ba5acd54fe8672190d
 /* Shop by Categories Ends 
 ------------------------------- */
 
@@ -580,6 +595,7 @@ hr,
 
 /*Featured Products Begins
 ----------------------------*/
+<<<<<<< HEAD
 :root {
   --product-width: 55rem;
 }
@@ -588,6 +604,50 @@ hr,
   max-width: 190rem;
   width: 80%;
   margin: auto;
+=======
+.featured-products h2 {
+  padding: 6rem 0;
+  text-align: center;
+  color: #006080;
+  font-family: "Roboto", sans-serif;
+  font-size: 40px;
+}
+
+/* .product-row1,
+.product-row2 {
+  display: flex;
+  justify-content: space-around;
+} */
+
+.featured-products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "prod1 prod2 prod3"
+    "prod4 prod5 prod6";
+}
+.product {
+  text-align: center;
+}
+.prod1 {
+  grid-area: prod1;
+}
+.prod2 {
+  grid-area: prod2;
+}
+.prod3 {
+  grid-area: prod3;
+}
+.prod4 {
+  grid-area: prod4;
+}
+.prod5 {
+  grid-area: prod5;
+}
+.prod6 {
+  grid-area: prod6;
+>>>>>>> dc0fc52d246f3bdf88e724ba5acd54fe8672190d
 }
 
 .featured-products h5 {
