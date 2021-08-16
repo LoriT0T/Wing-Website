@@ -30,39 +30,45 @@
           </div>
 
           <div class="search-bar">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search..." name="search" class="gradient-border-purple" id="item" maxlength="100">
+            <form action="/action_page.php" class="gradient-border-purple">
+                <input type="text" placeholder="Search..." name="search" class="" id="item" maxlength="100">
                 <img src="img/search.png" alt="search" class="search">
             </form>
           </div>
 
           <!------ Language Menu Begins ------>
-        
-          <div class="lang-menu">
-            <div class="selected-lang">
-                English
+          <div class="options">
+            <div class="lang-menu">
+              <div class="selected-lang">
+                  English
+              </div>
+              <a href="#"></a><img src="img/arrow-down-short.svg" alt="" class="arrow"></a>
+              <ul>
+                  <li>
+                      <a class="de" href="de">German</a>
+                  </li>
+                  <li>
+                      <a class="fr" href="fr">French</a>
+                  </li>
+                  <li>
+                      <a class="ar" href="ar">Arabic</a>
+                  </li>
+                  <li>
+                      <a class="en" href="en">English</a>
+                  </li>
+              </ul>
             </div>
-            <a href="#"></a><img src="img/arrow-down-short.svg" alt="" class="arrow"></a>
             <a href="checkout"><img src="img/person.png" alt="Checkout" class="checkout" width="25"></a>
             <a href="profile"><img src="img/shopping_cart.png" alt="Profile" class="profile" width="25"></a>
-            <ul>
-                <li>
-                    <a class="de" href="de">German</a>
-                </li>
-                <li>
-                    <a class="fr" href="fr">French</a>
-                </li>
-                <li>
-                    <a class="ar" href="ar">Arabic</a>
-                </li>
-                <li>
-                    <a class="en" href="en">English</a>
-                </li>
-            </ul>
           </div>
+        </div>
 
-        
-      </div>
+        <div class="header-categories">
+          <a href="#" class="boys">BOYS</a>
+          <a href="#" class="girls">GIRLS</a>
+          <a href="#" class="infants">INFANTS</a>
+          <a href="#" class="sales">SALES</a>
+        </div>
     </header>
     <hr>
 
@@ -71,6 +77,10 @@
 
             <div class="prev-btn">
               <i class="fas fa-chevron-left"></i>
+            </div>
+
+            <div class="down-arrow">
+              <a href="#shop-by-category"><img src="img/arrow-down-short.svg" alt="" class="down-arrow"></a>
             </div>
             
             <div class="slides-container">
@@ -99,12 +109,9 @@
         </div>
         <!------ Slider Ends ------>
 
-        <div class="down-arrow">
-            <a href="#shop-by-category"><img src="img/arrow-down-short.svg" alt="" class="down-arrow"></a>
-        </div>
-        
         <!-------- Shopping By Category Begins ---------->
-        <div class="categories">
+        <h2 class="shop-by-category-h2">SHOP BY CATEGORY</h2>
+        <div class="categories reveal">
           <div class="category category-1">
             <img
               class="category-image"
@@ -187,11 +194,9 @@
         <!-------- Shopping By Category Ends ---------->
 
         <!------------- Featured Products Begins ---------------->
-        <div class="featured-products">
-          <h2>FEATURED PRODUCTS</h2>
-          <div class="product-row1 reveal">
-            
-            <div class="product">
+        <h2 class="featured-products-h2">FEATURED PRODUCTS</h2>
+        <div class="featured-products reveal">
+            <div class="product product-1">
               <a href="#1">
               <img src="img/product-1.png" alt="">
               <h4>3.00 KWD</h4>
@@ -200,7 +205,7 @@
             </div>
             
            
-            <div class="product">
+            <div class="product product-2">
               <a href="#2">
               <img src="img/product-2.png" alt="">
               <h4>5.00 KWD</h4>
@@ -209,7 +214,7 @@
             </div>
            
 
-            <div class="product">
+            <div class="product product-3">
               <a href="#3">
               <img src="img/product-3.png" alt="">
               <h4>3.75 KWD</h4>
@@ -217,20 +222,20 @@
               </a>
             </div>
             
-          </div>
+          
 
-          <div class="product-row2 reveal">
            
-            <div class="product">
+            <div class="product product-4">
               <a href="#4">
               <img src="img/product-1.png" alt="">
               <h4>3.00 KWD</h4>
               <h5>Whale Snap-up Romper</h5>
               </a>
-            </div>
+              </div>
+           
            
             
-            <div class="product">
+            <div class="product product-5">
               <a href="#5">
               <img src="img/product-2.png" alt="">
               <h4>5.00 KWD</h4>
@@ -239,7 +244,7 @@
             </div>
             
             
-            <div class="product">
+            <div class="product product-6">
               <a href="6">
               <img src="img/product-3.png" alt="">
               <h4>3.75 KWD</h4>
@@ -252,7 +257,7 @@
         <!------------- Featured Products Ends ---------------->
 
         <!-------- Feauterd Brands Begins ---------->
-        <h1 style="text-align: center; color: #006080; font-family: 'Roboto', sans-serif; font-size: 40px;">shop by brand</h1>
+        <h2>shop by brand</h2>
         <div class="brand-carousel section-padding owl-carousel reveal">
             <div class="single-logo">
               <img src="https://i.postimg.cc/QxPJ8hXy/brand-1.png" alt="">
@@ -290,7 +295,7 @@
 
             <div class="footer-menu">
               <ul>
-                <li>Customer Service</li>
+                <li class="customer-service">Customer Service</li>
                 <li>Returns</li>
                 <li>Contact us</li>
                 <li>FAQs</li>
