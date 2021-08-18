@@ -151,7 +151,9 @@ input {
   width: 1400;
   background-color: white;
   display: none;
+  overflow: hidden;
 }
+
 
 ul li {
   float: left;
