@@ -60,24 +60,11 @@ body {
 /* header {
   margin: 5rem;
 } */
+
 form {
   border: 2px solid rgba(0, 96, 128, 0.6);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
-}
-.wing-text {
-  font-size: 60px;
-  color: #006080;
-  margin: 0;
-}
-
-/*.logo {
-  width: 60%; 
-} */
-
-.text-logo {
-  display: flex;
-  align-items: center;
 }
 
 .text-logo:hover {
@@ -86,6 +73,11 @@ form {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   cursor: default;
+}
+
+.logo:hover {
+  content: url('C:/Users/mesad/OneDrive/Desktop/Wing-Website/static/img/wing-text-logo-hover.png');
+  z-index: 1;
 }
 
 .search-bar {
@@ -134,11 +126,82 @@ input {
 .girls,
 .infants {
   color: #006080;
+  width: 50px;
+}
+
+.boys:hover,
+.girls:hover,
+.infants:hover {
+  color: white;
+  background: -webkit-linear-gradient(180deg, #5f78e8 -20.74%, #ed65a0 119.68%);
 }
 
 .sale {
   color: black;
 }
+
+/* Header Categories Drop Down Begins
+-----------------------------------------*/
+.drop-down {
+  z-index: 1; 
+}
+
+.drop-down-background {
+  height: 300px;
+  width: 1400;
+  background-color: white;
+  display: none;
+}
+
+ul li {
+  float: left;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+}
+
+ul li ul li a:hover {
+ color: #006080;
+}
+
+.drop-down-category {
+  color: #667E8D;
+}
+
+
+ul li ul li {
+  display: none;
+  text-align: start;
+}
+
+ul li:hover ul li{
+  display: block;
+}
+
+ul li:hover .drop-down-background{
+  display: block;
+}
+
+.clothing, .footwear, .accessories {
+  color: #006080;
+  background-color: none;
+  cursor: default;
+}
+
+.t-shirts, .polos, .shorts {
+  color: #667E8D;
+}
+
+.footwear-div, .accessories-div {
+  margin-top: -50px;
+  margin-left: 400px;
+}
+
+/* Header Categories Drop Down Ends
+-----------------------------------------*/
+
 
 /* Language Menu Begins 
 --------------------------- */
@@ -233,12 +296,11 @@ input {
 --------------------------- */
 /*Header Ends 
 -----------------------*/
-hr {
+.hr, .under-line {
   width: 100%;
-  border: 1px solid;
+  border: 2px solid;
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #f123c5, #67d4ff);
-  height: 2px;
   background: linear-gradient(to left, #e70ab7, #5ed1ff);
 }
 
@@ -342,7 +404,7 @@ hr {
 .down-arrow img {
   z-index: 1;
   position: absolute;
-  bottom: 29px;
+  bottom: 25px;
   left: 50%;
   transform: translate(-50%, 50%);
   height: 50px;
@@ -559,7 +621,7 @@ html {
   }
 }
 
-hr,
+.hr,
 .shopping-categories {
   animation: transitionLeft 1s ease-in-out;
 }

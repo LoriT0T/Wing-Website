@@ -14,19 +14,19 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    
+
     <title>Wing | Baby Shop | Home</title>
 </head>
 <body>
-    
+
     <div class="all-content">
-      
+
       <header>
         <!-- Breaks when header-top removed. -->
         <div class="header-top">
-          <div class="text-logo">
-            <img src="img/wing-logo.png" alt="Wing logo" class="logo">
-            <h1 class="wing-text">wing</h1>
+
+          <div class="">
+            <img src="img/wing-text-logo.svg" alt="" class="logo">
           </div>
 
           <div class="search-bar">
@@ -63,14 +63,64 @@
           </div>
         </div>
 
-        <div class="header-categories">
-          <a href="#" class="boys">BOYS</a>
-          <a href="#" class="girls">GIRLS</a>
-          <a href="#" class="infants">INFANTS</a>
-          <a href="#" class="sales">SALES</a>
+      <div class="header-categories">
+        <div class="drop-down">
+          <ul>
+              <li><a href="#" class="boys">BOYS</a>
+                
+            <div class="drop-down-background">
+             <ul>
+                    <li><a href="#" class="clothing">CLOTHING</a>
+               <div class="under-line"></div>
+                  <ul>
+                    <li><a href="#" class="t-shirts drop-down-category">T-Shirts</a></li>
+                    <li><a href="#" class="polos drop-down-category">Polo</a></li>
+                    <li><a href="#" class="shorts drop-down-category">Shorts</a></li>
+                  </ul>
+                    </li>
+                  </ul>
+                  <ul>
+                    <div class="footwear-div">
+                      <li class=><a href="#" class="footwear">FOOTWEAR</a>
+                        <div class="under-line"></div>
+                          <ul>
+                            <li><a href="#" class="drop-down-category">Shoes</a></li>
+                            <li><a href="#" class="drop-down-category">Shoes</a></li>
+                            <li><a href="#" class="drop-down-category">Shoes</a></li>
+                          </ul>
+                      </li>
+                      
+                      <ul>
+                        <div class="accessories-div">
+                        <li><a href="#" class="accessories">ACCESSORIES</a>
+                        <div class="under-line"></div>
+                        <ul>
+                          <li><a href="#" class="drop-down-category">Bags</a></li>
+                          <li><a href="#" class="drop-down-category">Bags</a></li>
+                          <li><a href="#" class="drop-down-category">Bags</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    </div>
+                  </ul>
+                    
+                    
+
+              </ul>
+            </div>
+              </li>
+                
+                  <li><a href="#" class="girls">GIRLS</a></li>
+                  <li><a href="#" class="infants">INFANTS</a></li>
+                  <li><a href="#" class="sales">SALES</a></li>
+
+           </ul>
+            </div>
         </div>
+      </div>
     </header>
-    <hr>
+
+      <div class="hr"></div>
 
         <!------ Slider Begins ------>
         <div class="wrapper">
@@ -82,11 +132,7 @@
             <div class="down-arrow">
               <a href="#shop-by-category"><img src="img/arrow-down-short.svg" alt="" class="down-arrow"></a>
             </div>
-            
-            <div class="down-arrow">
-              <a href="#shop-by-category"><img src="img/arrow-down-short.svg" alt="" class="down-arrow"></a>
-            </div>
-            
+
             <div class="slides-container">
 
                 <div class="slide-image">
@@ -106,16 +152,16 @@
             <div class="next-btn">
               <i class="fas fa-chevron-right"></i>
             </div>
-       
+
 
           <div class="navigation-dots">
-          </div> 
+          </div>
         </div>
         <!------ Slider Ends ------>
 
         <!-------- Shopping By Category Begins ---------->
-        <h2 class="shop-by-category-h2">SHOP BY CATEGORY</h2>
-        <div class="categories reveal">
+        <h2 class="shop-by-category-h2" id="shop-by-category">SHOP BY CATEGORY</h2>
+        <div class="categories reveal" >
           <div class="category category-1">
             <img
               class="category-image"
@@ -194,7 +240,7 @@
               <h4>Cutlery</h4>
             </div>
           </div>
-        </div>    
+        </div>
         <!-------- Shopping By Category Ends ---------->
 
         <!------------- Featured Products Begins ---------------->
@@ -207,8 +253,8 @@
               <h5>Whale Snap-up Romper</h5>
               </a>
             </div>
-            
-           
+
+
             <div class="product product-2">
               <a href="#2">
               <img src="img/product-2.png" alt="">
@@ -216,7 +262,7 @@
               <h5>2-Piece Tiger Tee & Shortall Set</h5>
               </a>
             </div>
-           
+
 
             <div class="product product-3">
               <a href="#3">
@@ -225,10 +271,10 @@
               <h5>2-Piece Pineapple Bodysuit & Short...</h5>
               </a>
             </div>
-            
-          
 
-           
+
+
+
             <div class="product product-4">
               <a href="#4">
               <img src="img/product-1.png" alt="">
@@ -236,9 +282,9 @@
               <h5>Whale Snap-up Romper</h5>
               </a>
               </div>
-           
-           
-            
+
+
+
             <div class="product product-5">
               <a href="#5">
               <img src="img/product-2.png" alt="">
@@ -246,8 +292,8 @@
               <h5>2-Piece Tiger Tee & Shortall Set</h5>
               </a>
             </div>
-            
-            
+
+
             <div class="product product-6">
               <a href="6">
               <img src="img/product-3.png" alt="">
@@ -282,7 +328,7 @@
             </div>
           </div>
         <!-------- Feauterd Brands Ends ---------->
-          <hr>
+        <div class="hr"></div>
 
           <footer>
             <div class="footer-block">
@@ -306,7 +352,7 @@
             </div>
 
           </footer>
-        
+
     </div>
     <script src="js/js.js"></script>
 </body>
