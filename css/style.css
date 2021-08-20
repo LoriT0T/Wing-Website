@@ -282,7 +282,7 @@ ul li:hover .drop-down-background{
 
 @media screen and (max-width: 1300px) {
   .drop-down-background:hover {
-    display: flex;
+    
   }
 }
 
