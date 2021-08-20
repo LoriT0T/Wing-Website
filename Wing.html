@@ -1,8 +1,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -22,44 +24,46 @@
       <header>
         <!-- Breaks when header-top removed. -->
         <div class="header-top" onclick="">
-          <div class="logo">
-            <svg id="wingLogo" width="247" height="99" viewBox="0 0 247 99" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path id="logoText" d="M88.2012 52.6484H104.051V60.6758H100.623L103.846 71.4863L110.086 52.6484H118.67L124.969 72.4531L128.836 60.6758H125.584V52.6484H141.434V60.6758H137.361L129.246 83.1172H120.486L114.129 63.752L107.654 83.1172H99.1289L91.5996 60.6758H88.2012V52.6484ZM144.949 52.6484H158.572V74.9727H162.791V83H144.949V74.9727H149.52V60.6758H144.949V52.6484ZM149.051 42.8633C149.051 42.1406 149.178 41.4668 149.432 40.8418C149.705 40.1973 150.076 39.6406 150.545 39.1719C151.014 38.7031 151.561 38.332 152.186 38.0586C152.83 37.7852 153.523 37.6484 154.266 37.6484C154.969 37.6484 155.633 37.7852 156.258 38.0586C156.883 38.332 157.43 38.7031 157.898 39.1719C158.367 39.6406 158.738 40.1973 159.012 40.8418C159.285 41.4668 159.422 42.1406 159.422 42.8633C159.422 43.5859 159.285 44.2695 159.012 44.9141C158.738 45.5391 158.367 46.0859 157.898 46.5547C157.43 47.0234 156.883 47.3945 156.258 47.668C155.633 47.9414 154.969 48.0781 154.266 48.0781C153.523 48.0781 152.83 47.9414 152.186 47.668C151.561 47.3945 151.014 47.0234 150.545 46.5547C150.076 46.0859 149.705 45.5391 149.432 44.9141C149.178 44.2695 149.051 43.5859 149.051 42.8633ZM193.055 65.5391C193.055 63.8398 192.605 62.5117 191.707 61.5547C190.809 60.5781 189.617 60.0898 188.133 60.0898C187.117 60.0898 186.092 60.3145 185.057 60.7637C184.021 61.2129 183.016 62.0527 182.039 63.2832V74.9727H186.961V83H168.094V74.9727H172.547V60.6758H168.152V52.6484H181.98V55.3145C183.25 54.3184 184.666 53.5371 186.229 52.9707C187.811 52.3848 189.471 52.0918 191.209 52.0918C194.861 52.0918 197.674 53.1172 199.646 55.168C201.619 57.1992 202.605 60.1777 202.605 64.1035V74.9727H206.912V83H193.055V65.5391ZM233.396 81.418C232.303 82.043 231.209 82.4922 230.115 82.7656C229.021 83.0391 227.908 83.1758 226.775 83.1758C224.432 83.1758 222.273 82.7754 220.301 81.9746C218.328 81.1738 216.619 80.0703 215.174 78.6641C213.748 77.2383 212.635 75.5586 211.834 73.625C211.033 71.6914 210.633 69.5918 210.633 67.3262C210.633 65.1973 211.014 63.1953 211.775 61.3203C212.557 59.4258 213.641 57.7754 215.027 56.3691C216.414 54.9434 218.074 53.8203 220.008 53C221.941 52.1797 224.041 51.7598 226.307 51.7402C227.693 51.7598 228.963 51.9062 230.115 52.1797C231.287 52.4531 232.381 52.8242 233.396 53.293V52.6484H242.273V81.7402C242.273 84.2988 241.834 86.5059 240.955 88.3613C240.076 90.2363 238.895 91.7793 237.41 92.9902C235.945 94.2207 234.236 95.1289 232.283 95.7148C230.33 96.3203 228.279 96.623 226.131 96.623C223.475 96.623 221.014 96.2617 218.748 95.5391C216.502 94.8164 214.5 93.8398 212.742 92.6094L216.404 86.1055C217.752 86.9648 219.217 87.6387 220.799 88.127C222.381 88.6348 224.139 88.8887 226.072 88.8887C227.127 88.8887 228.094 88.7715 228.973 88.5371C229.871 88.3027 230.643 87.9023 231.287 87.3359C231.951 86.7891 232.469 86.0469 232.84 85.1094C233.211 84.1719 233.396 82.9902 233.396 81.5645V81.418ZM227.068 75.0605C228.436 75.0605 229.666 74.7188 230.76 74.0352C231.873 73.332 232.752 72.4141 233.396 71.2812L233.455 63.8984C232.791 62.668 231.883 61.6914 230.73 60.9688C229.578 60.2461 228.328 59.875 226.98 59.8555C226.023 59.875 225.086 60.0703 224.168 60.4414C223.25 60.793 222.449 61.3008 221.766 61.9648C221.102 62.6289 220.574 63.4199 220.184 64.3379C219.793 65.2363 219.598 66.2422 219.598 67.3555C219.598 68.5273 219.793 69.5918 220.184 70.5488C220.574 71.5059 221.102 72.3164 221.766 72.9805C222.43 73.6445 223.211 74.1621 224.109 74.5332C225.027 74.8848 226.014 75.0605 227.068 75.0605Z" fill="#006080"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.666 94.0001L76.9995 64.1465L72.4851 82.3794C71.6858 85.6186 69.8209 88.4994 67.1868 90.5644C64.5526 92.6294 61.3001 93.7602 57.9457 93.7773L15.666 94.0001Z" fill="#F97FB5"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.666 93.9996L53.2631 88.2047L57.2856 72.1016L15.666 93.9996Z" fill="#AE1857"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M53.2637 88.2052L77.0001 64.1465L64.5216 43.1709L53.2637 88.2052Z" fill="#E81F76"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M53.2637 88.2052L77.0001 64.1465L57.2862 72.1021L53.2637 88.2052Z" fill="#AE1857"/>
-              <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M53.2631 88.2055L15.666 94.0005L51.0215 93.8952C52.3655 93.8895 53.6892 93.5694 54.8856 92.9606C56.0821 92.3518 57.1175 91.4716 57.9083 90.391L76.9933 64.1592L53.2631 88.2055Z" fill="#131529"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M61.7012 54.4573L77.0003 64.1465L64.5219 43.1709L61.7012 54.4573Z" fill="#F97FB5"/>
-              <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M64.5216 43.1709L53.2637 88.2052L67.965 48.9596L64.5216 43.1709Z" fill="#131529"/>
-              <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M64.5216 43.1709L53.2637 88.2052L65.904 45.505L64.5216 43.1709Z" fill="#131529"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.666 93.9997L51.2893 79.6672L48.1759 76.8936L15.666 93.9997Z" fill="#F97FB5"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M15.666 94.0005L51.2893 79.668L53.2631 83.8037L15.666 94.0005Z" fill="#E81F76"/>
-              <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M35.748 83.4317L53.2639 88.205L48.0459 76.9434L35.748 83.4317Z" fill="#131529"/>
-              <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M45.8291 78.1259L53.2638 88.205L48.0458 76.9434L45.8291 78.1259Z" fill="#131529"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L53.2636 88.2051L64.5216 43.1708L0 0Z" fill="#00B2E3"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L61.7009 54.4572L64.5216 43.1708L0 0Z" fill="#96DAEA"/>
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L53.2636 88.2051C54.4778 82.7198 56.0345 77.352 57.3484 71.8729L0 0Z" fill="#0069A7"/>
-              <defs>
-              <linearGradient id="paint0_linear" x1="87" y1="62" x2="247" y2="62" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#00B2E3"/>
-              <stop offset="1" stop-color="#E81F76"/>
-              </linearGradient>
-              </defs>
-              </svg>
-          </div>
+          
+            <div class="logo">
+              <svg id="wingLogo" width="247" height="99" viewBox="0 0 247 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path id="logoText" d="M88.2012 52.6484H104.051V60.6758H100.623L103.846 71.4863L110.086 52.6484H118.67L124.969 72.4531L128.836 60.6758H125.584V52.6484H141.434V60.6758H137.361L129.246 83.1172H120.486L114.129 63.752L107.654 83.1172H99.1289L91.5996 60.6758H88.2012V52.6484ZM144.949 52.6484H158.572V74.9727H162.791V83H144.949V74.9727H149.52V60.6758H144.949V52.6484ZM149.051 42.8633C149.051 42.1406 149.178 41.4668 149.432 40.8418C149.705 40.1973 150.076 39.6406 150.545 39.1719C151.014 38.7031 151.561 38.332 152.186 38.0586C152.83 37.7852 153.523 37.6484 154.266 37.6484C154.969 37.6484 155.633 37.7852 156.258 38.0586C156.883 38.332 157.43 38.7031 157.898 39.1719C158.367 39.6406 158.738 40.1973 159.012 40.8418C159.285 41.4668 159.422 42.1406 159.422 42.8633C159.422 43.5859 159.285 44.2695 159.012 44.9141C158.738 45.5391 158.367 46.0859 157.898 46.5547C157.43 47.0234 156.883 47.3945 156.258 47.668C155.633 47.9414 154.969 48.0781 154.266 48.0781C153.523 48.0781 152.83 47.9414 152.186 47.668C151.561 47.3945 151.014 47.0234 150.545 46.5547C150.076 46.0859 149.705 45.5391 149.432 44.9141C149.178 44.2695 149.051 43.5859 149.051 42.8633ZM193.055 65.5391C193.055 63.8398 192.605 62.5117 191.707 61.5547C190.809 60.5781 189.617 60.0898 188.133 60.0898C187.117 60.0898 186.092 60.3145 185.057 60.7637C184.021 61.2129 183.016 62.0527 182.039 63.2832V74.9727H186.961V83H168.094V74.9727H172.547V60.6758H168.152V52.6484H181.98V55.3145C183.25 54.3184 184.666 53.5371 186.229 52.9707C187.811 52.3848 189.471 52.0918 191.209 52.0918C194.861 52.0918 197.674 53.1172 199.646 55.168C201.619 57.1992 202.605 60.1777 202.605 64.1035V74.9727H206.912V83H193.055V65.5391ZM233.396 81.418C232.303 82.043 231.209 82.4922 230.115 82.7656C229.021 83.0391 227.908 83.1758 226.775 83.1758C224.432 83.1758 222.273 82.7754 220.301 81.9746C218.328 81.1738 216.619 80.0703 215.174 78.6641C213.748 77.2383 212.635 75.5586 211.834 73.625C211.033 71.6914 210.633 69.5918 210.633 67.3262C210.633 65.1973 211.014 63.1953 211.775 61.3203C212.557 59.4258 213.641 57.7754 215.027 56.3691C216.414 54.9434 218.074 53.8203 220.008 53C221.941 52.1797 224.041 51.7598 226.307 51.7402C227.693 51.7598 228.963 51.9062 230.115 52.1797C231.287 52.4531 232.381 52.8242 233.396 53.293V52.6484H242.273V81.7402C242.273 84.2988 241.834 86.5059 240.955 88.3613C240.076 90.2363 238.895 91.7793 237.41 92.9902C235.945 94.2207 234.236 95.1289 232.283 95.7148C230.33 96.3203 228.279 96.623 226.131 96.623C223.475 96.623 221.014 96.2617 218.748 95.5391C216.502 94.8164 214.5 93.8398 212.742 92.6094L216.404 86.1055C217.752 86.9648 219.217 87.6387 220.799 88.127C222.381 88.6348 224.139 88.8887 226.072 88.8887C227.127 88.8887 228.094 88.7715 228.973 88.5371C229.871 88.3027 230.643 87.9023 231.287 87.3359C231.951 86.7891 232.469 86.0469 232.84 85.1094C233.211 84.1719 233.396 82.9902 233.396 81.5645V81.418ZM227.068 75.0605C228.436 75.0605 229.666 74.7188 230.76 74.0352C231.873 73.332 232.752 72.4141 233.396 71.2812L233.455 63.8984C232.791 62.668 231.883 61.6914 230.73 60.9688C229.578 60.2461 228.328 59.875 226.98 59.8555C226.023 59.875 225.086 60.0703 224.168 60.4414C223.25 60.793 222.449 61.3008 221.766 61.9648C221.102 62.6289 220.574 63.4199 220.184 64.3379C219.793 65.2363 219.598 66.2422 219.598 67.3555C219.598 68.5273 219.793 69.5918 220.184 70.5488C220.574 71.5059 221.102 72.3164 221.766 72.9805C222.43 73.6445 223.211 74.1621 224.109 74.5332C225.027 74.8848 226.014 75.0605 227.068 75.0605Z" fill="#006080"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.666 94.0001L76.9995 64.1465L72.4851 82.3794C71.6858 85.6186 69.8209 88.4994 67.1868 90.5644C64.5526 92.6294 61.3001 93.7602 57.9457 93.7773L15.666 94.0001Z" fill="#F97FB5"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.666 93.9996L53.2631 88.2047L57.2856 72.1016L15.666 93.9996Z" fill="#AE1857"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M53.2637 88.2052L77.0001 64.1465L64.5216 43.1709L53.2637 88.2052Z" fill="#E81F76"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M53.2637 88.2052L77.0001 64.1465L57.2862 72.1021L53.2637 88.2052Z" fill="#AE1857"/>
+                <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M53.2631 88.2055L15.666 94.0005L51.0215 93.8952C52.3655 93.8895 53.6892 93.5694 54.8856 92.9606C56.0821 92.3518 57.1175 91.4716 57.9083 90.391L76.9933 64.1592L53.2631 88.2055Z" fill="#131529"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M61.7012 54.4573L77.0003 64.1465L64.5219 43.1709L61.7012 54.4573Z" fill="#F97FB5"/>
+                <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M64.5216 43.1709L53.2637 88.2052L67.965 48.9596L64.5216 43.1709Z" fill="#131529"/>
+                <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M64.5216 43.1709L53.2637 88.2052L65.904 45.505L64.5216 43.1709Z" fill="#131529"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.666 93.9997L51.2893 79.6672L48.1759 76.8936L15.666 93.9997Z" fill="#F97FB5"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M15.666 94.0005L51.2893 79.668L53.2631 83.8037L15.666 94.0005Z" fill="#E81F76"/>
+                <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M35.748 83.4317L53.2639 88.205L48.0459 76.9434L35.748 83.4317Z" fill="#131529"/>
+                <path opacity="0.15" fill-rule="evenodd" clip-rule="evenodd" d="M45.8291 78.1259L53.2638 88.205L48.0458 76.9434L45.8291 78.1259Z" fill="#131529"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L53.2636 88.2051L64.5216 43.1708L0 0Z" fill="#00B2E3"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L61.7009 54.4572L64.5216 43.1708L0 0Z" fill="#96DAEA"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0L53.2636 88.2051C54.4778 82.7198 56.0345 77.352 57.3484 71.8729L0 0Z" fill="#0069A7"/>
+                <defs>
+                <linearGradient id="paint0_linear" x1="87" y1="62" x2="247" y2="62" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#00B2E3"/>
+                <stop offset="1" stop-color="#E81F76"/>
+                </linearGradient>
+                </defs>
+                </svg>
+            </div>
 
 
 
-          <div class="search-bar">
-            <form action="/action_page.php">
-                <input type="text" placeholder="Search..." name="search" id="item" maxlength="100">
-                <div class="search-icon-container">
-                  <img src="./img/search_icon.svg" alt="search" class = 'search-icon'>
-                </div>
+            <div class="search-bar">
+              <form action="/action_page.php">
+                  <input type="text" placeholder="Search..." name="search" id="item" maxlength="100">
+                  <div class="search-icon-container">
+                    <img src="./img/search_icon.svg" alt="search" class = 'search-icon'>
+                  </div>
 
-            </form>
-          </div>
+              </form>
+          
+        </div>
 
           <!------ Language Menu Begins ------>
           <div class="options">
@@ -69,12 +73,6 @@
               </div>
               <a href="#"></a><img src="./img/arrow-down-short.svg" alt="" class="arrow"></a>
               <ul>
-                  <li>
-                      <a class="de" href="de"><h2>German</h2></a>
-                  </li>
-                  <li>
-                      <a class="fr" href="fr"><h2>French</h2></a>
-                  </li>
                   <li>
                       <a class="ar" href="ar"><h2>Arabic</h2></a>
                   </li>
@@ -88,7 +86,7 @@
             <a href="#" class = 'hamburger'><img src="./img/hamburger.svg" alt="hamburger menu"></a>
           </div>
 
-          <div class="sidebar-menu">
+          <!-- <div class="sidebar-menu">
             <div class="sidebar-categories">
               <div class="sidebar-category">
                 <div class="category-title">
@@ -110,7 +108,7 @@
                   <h2>SALE</h2>
                 </div>
               </div>
-          </div>
+          </div> -->
 
           </div>
 
@@ -119,7 +117,7 @@
         <div class="header-categories">
           <div class="drop-down">
             <ul>
-                <li><a href="#" class="boys">BOYS</a>
+                <li><a href="#" class="boys"><h2>BOYS</h2></a>
                   
               <div class="drop-down-background">
                <ul>
@@ -166,7 +164,7 @@
   
   
                 
-                <li><a href="#" class="boys">GIRLS</a>
+                <li><a href="#" class="boys"><h2>GIRLS</h2></a>
                   
                   <div class="drop-down-background">
                    <ul>
@@ -205,7 +203,7 @@
                         </ul>
                           
   
-                        <li><a href="#" class="boys">INFANTS</a>
+                        <li><a href="#" class="infants"><h2>INFANTS</h2></a>
                   
                           <div class="drop-down-background">
                            <ul>
@@ -242,14 +240,51 @@
                                   </ul>
                                   </div>
                                 </ul>
+
+
+
+                                <li><a href="#" class="sale"><h2>SALES</h2></a>
+                  
+                                  <div class="drop-down-background">
+                                   <ul>
+                                          <li><a href="#" class="clothing">CLOTHING</a>
+                                     <div class="under-line"></div>
+                                        <ul>
+                                          <li><a href="#" class="t-shirts drop-down-category">T-Shirts</a></li>
+                                          <li><a href="#" class="polos drop-down-category">Polo</a></li>
+                                          <li><a href="#" class="shorts drop-down-category">Shorts</a></li>
+                                        </ul>
+                                          </li>
+                                        </ul>
+                                        <ul>
+                                          <div class="footwear-div">
+                                            <li class=><a href="#" class="footwear">FOOTWEAR</a>
+                                              <div class="under-line"></div>
+                                                <ul>
+                                                  <li><a href="#" class="drop-down-category">Shoes</a></li>
+                                                  <li><a href="#" class="drop-down-category">Shoes</a></li>
+                                                  <li><a href="#" class="drop-down-category">Shoes</a></li>
+                                                </ul>
+                                            </li>
+                                            
+                                            <ul>
+                                              <div class="accessories-div">
+                                              <li><a href="#" class="accessories">ACCESSORIES</a>
+                                              <div class="under-line"></div>
+                                              <ul>
+                                                <li><a href="#" class="drop-down-category">Bags</a></li>
+                                                <li><a href="#" class="drop-down-category">Bags</a></li>
+                                                <li><a href="#" class="drop-down-category">Bags</a></li>
+                                              </ul>
+                                            </li>
+                                          </ul>
+                                          </div>
+                                        </ul>
                           
                       </ul>
                     </ul>
                   </div>
-                    </li>
-  
-                    <li><a href="#" class="sales">SALES</a></li>
-  
+                    </li>  
              </ul>
               </div>
           </div>
@@ -567,7 +602,7 @@
         <footer>
           <div class="footer-block">
             <!-- Insert wing logo -->
-            <h6>wing</h6>
+            <img src="img/wing_logo.svg" alt="Wing">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur leo arcu, malesuada ut congue at, tincidunt in diam.</p>
 
             <div class="social-icons">
@@ -590,32 +625,5 @@
         
   </main>    
   <script src="js/js.js"></script>
-  <script>
-    wingLogoSvg = document.querySelector('svg#wingLogo')
-    wingLogoText = wingLogoSvg.querySelector('path#logoText')
-
-    wingLogoSvg.addEventListener('mouseenter', (e) => {
-      wingLogoText.setAttribute('fill', 'url(#paint0_linear)')
-    })
-
-    wingLogoSvg.addEventListener('mouseleave', (e) => {
-      wingLogoText.setAttribute('fill', '#006080')
-    })
-
-    wingLogoSvg.onclick = ()=> location.href = '/static/Wing.html'
-
-    document.querySelectorAll('.product-image').forEach(productImage=>{
-      productImage.addEventListener('mouseenter', (e) => {
-        productImage.querySelector('.primary-image').classList.add('hidden')
-        productImage.querySelector('.secondary-image').classList.remove('hidden')
-      })
-
-      productImage.addEventListener('mouseleave', (e) => {
-        productImage.querySelector('.secondary-image').classList.add('hidden')
-        productImage.querySelector('.primary-image').classList.remove('hidden')
-      })
-      
-    })
-  </script>
 </body>
 </html>

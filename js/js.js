@@ -1,3 +1,28 @@
+wingLogoSvg = document.querySelector('svg#wingLogo')
+    wingLogoText = wingLogoSvg.querySelector('path#logoText')
+
+    wingLogoSvg.addEventListener('mouseenter', (e) => {
+      wingLogoText.setAttribute('fill', 'url(#paint0_linear)')
+    })
+
+    wingLogoSvg.addEventListener('mouseleave', (e) => {
+      wingLogoText.setAttribute('fill', '#006080')
+    })
+
+    wingLogoSvg.onclick = ()=> location.href = '/static/Wing.html'
+
+    document.querySelectorAll('.product-image').forEach(productImage=>{
+      productImage.addEventListener('mouseenter', (e) => {
+        productImage.querySelector('.primary-image').classList.add('hidden')
+        productImage.querySelector('.secondary-image').classList.remove('hidden')
+      })
+
+      productImage.addEventListener('mouseleave', (e) => {
+        productImage.querySelector('.secondary-image').classList.add('hidden')
+        productImage.querySelector('.primary-image').classList.remove('hidden')
+      })
+      
+    })
 /* Java Script for Slider Begins 
  ----------------------------------*/
 const slideImage = document.querySelectorAll(".slide-image");

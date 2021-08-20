@@ -6,6 +6,44 @@
   --product-width: 32;
 }
 
+
+h1 {
+  font-family: "Arvo", sans-serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #006080;
+  /* Fix later */
+  text-align: center;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.4rem;
+  letter-spacing: 5%;
+  font-weight: 400;
+}
+
+h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #667e8d;
+}
+
+h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #006080;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -42,6 +80,11 @@ body {
   max-width: 2000px;
   box-sizing: border-box;
   font-family: "Arvo", serif;
+  overflow-x: hidden;
+}
+
+.hidden {
+  display: none;
 }
 
 /* .gradient-border-purple {
@@ -59,6 +102,10 @@ body {
 -----------------------*/
 header {
   margin: 3rem 16rem 0 16rem;
+}
+
+#wingLogo {
+  cursor: default;
 }
 
 form {
@@ -162,6 +209,15 @@ input {
   bottom: 0;
 }
 
+@media screen and (max-width: 1300px) {
+  .header-top {
+    flex-direction: column;
+  }
+  
+}
+
+/* Header Ends 
+-----------------------*/
 
 /* Header Categories Drop Down Begins
 -----------------------------------------*/
@@ -224,6 +280,12 @@ ul li:hover .drop-down-background{
   margin-left: 400px;
 }
 
+@media screen and (max-width: 1300px) {
+  .drop-down-background:hover {
+    display: flex;
+  }
+}
+
 /* Header Categories Drop Down Ends
 -----------------------------------------*/
 
@@ -242,6 +304,7 @@ ul li:hover .drop-down-background{
 .lang-menu {
   display: flex;
   z-index: 1;
+
 }
 
 .selected-lang {
@@ -255,6 +318,7 @@ ul li:hover .drop-down-background{
 .selected-lang:before {
   content: "";
   display: block;
+  margin-top: 7%;
   width: 32px;
   height: 32px;
   background-image: url(https://www.countryflags.io/us/flat/32.png);
@@ -269,13 +333,16 @@ ul li:hover .drop-down-background{
   border-radius: 5px;
   display: none;
   position: absolute;
+  width: 150px;
+  margin-top: 2.5%;
 }
 
 .lang-menu ul li {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin-left: 20px;
+  margin-left: 30px;
+  margin-bottom: 32px;
 }
 
 .lang-menu ul li a {
@@ -316,10 +383,16 @@ ul li:hover .drop-down-background{
 .fr:before {
   background-image: url(https://www.countryflags.io/fr/flat/32.png);
 }
+
+@media screen and (max-width: 1300px) {
+  .options {
+    position:absolute;
+    top:0;
+    right:0;
+  }
+}
 /* Language Menu Ends 
 --------------------------- */
-/*Header Ends 
------------------------*/
 hr, .under-line {
   width: 100%;
   border: 2px solid;
@@ -406,14 +479,13 @@ hr, .under-line {
   left: 50%;
   transform: translateX(-50%);
   display: flex;
+  align-items: center;
 }
 
 .single-dot {
-  border: 1px solid transparent;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #d53a3a, #75d8ff);
-  height: 16px;
-  width: 16px;
+  border: 1px solid black;
+  height: 10px;
+  width: 10px;
   border-radius: 50%;
   margin: 0 8px;
   cursor: pointer;
@@ -421,12 +493,10 @@ hr, .under-line {
 }
 
 .single-dot.active {
-  background: linear-gradient(
-    90deg,
-    rgb(49, 210, 255) 4%,
-    rgba(232, 95, 187, 1) 74%
-  );
-  border: 1px solid lightgray;
+  border: 1px solid white;
+  background: black;
+  height: 16px;
+  width: 16px;
 }
 
 @media screen and (min-width: 200px) {
@@ -462,22 +532,17 @@ hr, .under-line {
 /* Shop by Categories Begins 
 ------------------------------- */
 
-h4 {
-  font-family: "Arvo", sans-serif;
-  font-weight: 400;
-  color: #006080;
-  font-size: 2.5rem;
-}
-
-.categories .category {
+.category {
   width: var(--category-width);
   height: calc(var(--category-width) * calc(387 / 423));
   /* Will include the height of the category title */
-  margin-bottom: calc(0.2016 * var(--category-width) * calc(387 / 423));
+  /* margin-bottom: calc(0.2016 * var(--category-width) * calc(387 / 423)); */
   cursor: pointer;
   position: relative;
+  margin: auto;
 }
-.categories .category-title {
+
+.category-title {
   text-align: center;
   background-color: #efefef;
   border-radius: 0 0 4.4rem 4.4rem;
@@ -492,7 +557,8 @@ h4 {
   align-items: center;
   justify-content: center;
 }
-.categories .category img {
+
+.category img {
   border-radius: 4.4rem 4.4rem 0 0;
   width: 100%;
   object-fit: cover;
@@ -509,58 +575,16 @@ h4 {
 }
 
 .categories {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas:
-    "cat1 cat2 cat3 cat4"
-    "cat5 cat6 cat7 cat8";
-  justify-items: center;
-  column-gap: 3.5rem;
-  row-gap: 4rem;
-  width: 87.3rem;
+  text-align: center;
   margin: auto;
-  margin-top: 5rem;
-  margin-bottom: 7.8rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  row-gap: 6rem;
+  margin-top: 8rem;
+  margin-bottom: 15.8rem;
+  padding: 40px calc((100% - (255px * 3)) / 2);
 }
-
-.category-1 {
-  grid-area: cat1;
-}
-.category-2 {
-  grid-area: cat2;
-}
-
-.category-3 {
-  grid-area: cat3;
-}
-.category-4 {
-  grid-area: cat4;
-}
-
-.category-5 {
-  grid-area: cat5;
-}
-.category-6 {
-  grid-area: cat6;
-}
-.category-7 {
-  grid-area: cat7;
-}
-.category-8 {
-  grid-area: cat8;
-}
-
-/* @media screen and (max-width: 1100px) {
-  .categories {
-    grid-template-areas:
-      ". cat1 cat2 ."
-      ". cat3 cat4 ."
-      ". cat5 cat6 ."
-      ". cat7 cat8 .";
-    column-gap: 5rem;
-  }
-} */
 
 /* Shop by Categories Ends 
 ------------------------------- */
@@ -776,13 +800,15 @@ hr,
 /* Brands Slider Ends 
 --------------------------*/
 
-/* Continue from here */
+/* Footer Starts Here
+--------------------------- */
 footer {
   font-family: "Arvo", serif;
   padding: 3rem 8rem;
   display: flex;
-  justify-content: space-between;
-  width: 60%;
+  justify-content: end;
+  width: 100%;
+  /* flex-wrap: wrap; */
 }
 
 footer h6 {
@@ -803,6 +829,8 @@ footer h6 {
 .footer-menu {
   padding-top: 8.2rem;
   color: #666666;
+  width: 20%;
+  margin-left: 20%;
 }
 
 .customer-service {
@@ -820,43 +848,11 @@ li {
   margin-left: 4rem;
 }
 
-h1 {
-  font-family: "Arvo", sans-serif;
-  font-size: 4rem;
-  font-weight: 400;
-  color: #006080;
-  /* Fix later */
-  text-align: center;
+@media screen and (max-width: 800px) {
+  footer {
+    flex-wrap: wrap;
+  }
 }
 
-h2 {
-  font-family: "Arvo", sans-serif;
-  font-size: 2.4rem;
-  letter-spacing: 5%;
-  font-weight: 400;
-}
-
-h3 {
-  font-family: "Poppins", sans-serif;
-  font-size: 2.2rem;
-  font-weight: 400;
-  color: #667e8d;
-}
-
-h4 {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.8rem;
-  font-weight: 400;
-  color: #006080;
-}
-
-p {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  font-weight: 400;
-}
-
-.hidden {
-  display: none;
-}
+/* Footer Ends Here
+--------------------------- */
