@@ -181,7 +181,7 @@ input {
   color: #006080;
 }
 
-.sale {
+.sales {
   color: black;
 }
 
@@ -225,12 +225,31 @@ input {
   z-index: 1; 
 }
 
-.drop-down-background {
+.header-categories h2 {
+  width: 50%;
+}
+
+.drop-down-background-boys,
+.drop-down-background-girls,
+.drop-down-background-infants,
+.drop-down-background-sales {
   height: 300px;
   width: 1400;
   background-color: white;
   display: none;
   overflow: hidden;
+}
+
+.drop-down-background-girls {
+  margin-left: -200px;
+}
+
+.drop-down-background-infants {
+  margin-left: -400px;
+}
+
+.drop-down-background-sales {
+  margin-left: -600px;
 }
 
 
@@ -261,7 +280,10 @@ ul li:hover ul li{
   display: block;
 }
 
-ul li:hover .drop-down-background{
+ul li:hover .drop-down-background-boys,
+ul li:hover .drop-down-background-girls,
+ul li:hover .drop-down-background-infants, 
+ul li:hover .drop-down-background-sales{
   display: block;
 }
 
@@ -275,15 +297,27 @@ ul li:hover .drop-down-background{
   color: #667E8D;
 }
 
-.footwear-div, .accessories-div {
+.boys h2 {
+  width: 35%;
+}
+
+
+.boys-1 h2:hover,
+.girls-1 h2:hover,
+.infants-1 h2:hover,
+.sales-1 h2:hover,
+.dropdown-hover {
+  background: linear-gradient(90deg, #52C5E6 -5.03%, #F0428E 134.62%);
+  color: white;
+}
+
+.footwear-div, .accessories-div, .girls-accessories-div {
   margin-top: -50px;
   margin-left: 400px;
 }
 
 @media screen and (max-width: 1300px) {
-  .drop-down-background:hover {
-    
-  }
+  
 }
 
 /* Header Categories Drop Down Ends
@@ -315,15 +349,6 @@ ul li:hover .drop-down-background{
   line-height: 2;
 }
 
-.selected-lang:before {
-  content: "";
-  display: block;
-  margin-top: 7%;
-  width: 32px;
-  height: 32px;
-  background-image: url(https://www.countryflags.io/us/flat/32.png);
-}
-
 .lang-menu ul {
   margin: 0;
   padding: 0;
@@ -335,53 +360,25 @@ ul li:hover .drop-down-background{
   position: absolute;
   width: 150px;
   margin-top: 2.5%;
+  margin-left: -30px;
 }
 
 .lang-menu ul li {
   list-style: none;
-  display: flex;
-  justify-content: space-between;
   margin-left: 30px;
-  margin-bottom: 32px;
 }
 
 .lang-menu ul li a {
   width: 80px;
   display: block;
-  padding: 5px 10px;
 }
 
 .selected-lang ul li a:hover {
   background-color: #f2f2f2;
 }
 
-.lang-menu ul li a:before {
-  content: "";
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  vertical-align: middle;
-  margin-right: 10px;
-}
-
 .lang-menu:hover ul {
   display: block;
-}
-
-.de:before {
-  background-image: url(https://www.countryflags.io/de/flat/32.png);
-}
-
-.en:before {
-  background-image: url(https://www.countryflags.io/us/flat/32.png);
-}
-
-.ar:before {
-  background-image: url(https://www.countryflags.io/ae/flat/32.png);
-}
-
-.fr:before {
-  background-image: url(https://www.countryflags.io/fr/flat/32.png);
 }
 
 @media screen and (max-width: 1300px) {
@@ -692,29 +689,16 @@ hr,
 ----------------------------*/
 
 .featured-products {
-  /* max-width: 190rem; */
   width: calc(100% * 140 / 192);
-  /* width: calc(100% * var(--product-width) * 4 / 192); */
   margin: auto;
 }
 
 .product-title {
   padding: 1.5rem 0;
-  /* text-overflow: ellipsis; */
 }
 
-/* .product-title h4 {
-  white-space: nowrap;
-  overflow: hidden;
-} */
-
 .product {
-  /* width: calc(var(--product-width) + 6rem); */
-  /* + 6 rem due to 3rem padding left and 3rem padding right */
-
-  /* width: var(--product-width); */
   padding-bottom: 3rem;
-  /* Use padding to create a more appealing box shadow */
   cursor: pointer;
   text-align: center;
   display: flex;
@@ -722,15 +706,7 @@ hr,
   justify-content: space-between;
 }
 
-/* .product:hover {
-  box-shadow: 2px 3px 5px 3px #adadad;
-} */
-
-/* .product-image .primary-image img {
-   Image aspect ratio l:h => 1:1.25 
-} */
 .product-image img {
-  /* Image aspect ratio 1:1.25 to avoid stretching*/
   width: 100%;
   height: 100%;
 }
@@ -753,7 +729,6 @@ hr,
 @media screen and (max-width: 1285px) {
   .featured-products-container .product {
     flex: 0 0 33.3333%;
-    /* flex: 0 0 calc(100% * var(--product-width) / 140); */
   }
 }
 
@@ -769,7 +744,6 @@ hr,
   }
   .featured-products-container .product {
     flex: 0 0 50%;
-    /* flex: 0 0 calc(100% * var(--product-width) / 140); */
   }
 }
 /*Featured Products Ends
@@ -777,9 +751,6 @@ hr,
 
 /* Brands Slider Begins 
 --------------------------*/
-.brand-carousel {
-  background: aliceblue;
-}
 .owl-dots {
   text-align: center;
   margin-top: 4%;
@@ -793,6 +764,7 @@ hr,
   border-radius: 50%;
   margin: 0 5px;
 }
+
 .owl-dot.active {
   background-color: #000 !important;
 }

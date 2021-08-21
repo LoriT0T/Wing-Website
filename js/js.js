@@ -23,6 +23,45 @@ wingLogoSvg = document.querySelector('svg#wingLogo')
       })
       
     })
+
+    
+ /* Event Listener on Drop-Down Menu Begins
+ ----------------------------------------*/
+ var boys = document.querySelector('.boys')
+    document.getElementById("drop-down-background-boys").addEventListener("mouseover", function() {
+      boys.classList.add('dropdown-hover')
+  });  
+  document.getElementById("drop-down-background-boys").addEventListener("mouseout", function() {
+      boys.classList.remove('dropdown-hover')
+  });
+
+  var girls = document.querySelector('.girls')
+    document.getElementById("drop-down-background-girls").addEventListener("mouseover", function() {
+      girls.classList.add('dropdown-hover')
+  });   
+  document.getElementById("drop-down-background-girls").addEventListener("mouseout", function() {
+      girls.classList.remove('dropdown-hover')
+  });
+
+  var infants = document.querySelector('.infants')
+    document.getElementById("drop-down-background-infants").addEventListener("mouseover", function() {
+      infants.classList.add('dropdown-hover')
+  });
+  document.getElementById("drop-down-background-infants").addEventListener("mouseout", function() {
+      infants.classList.remove('dropdown-hover')
+  });
+
+  var sales = document.querySelector('.sales')
+    document.getElementById("drop-down-background-sales").addEventListener("mouseover", function() {
+      sales.classList.add('dropdown-hover')
+  }); 
+  document.getElementById("drop-down-background-sales").addEventListener("mouseout", function() {
+      sales.classList.remove('dropdown-hover')
+  });
+  
+ /* Event Listener on Drop-Down Menu Ends
+ ----------------------------------------*/
+
 /* Java Script for Slider Begins 
  ----------------------------------*/
 const slideImage = document.querySelectorAll(".slide-image");
@@ -177,18 +216,21 @@ function reveal() {
  -------------------------------------------*/
 
 $(".brand-carousel").owlCarousel({
-  loop: true,
+  loop: false,
   margin: 10,
   autoplay: true,
   responsive: {
     0: {
       items: 1,
     },
+    300: {
+      items: 2,
+    },
     600: {
       items: 3,
     },
-    1000: {
-      items: 5,
+    900: {
+      items: 4,
     },
   },
 });

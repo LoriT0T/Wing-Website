@@ -58,7 +58,7 @@
               <form action="/action_page.php">
                   <input type="text" placeholder="Search..." name="search" id="item" maxlength="100">
                   <div class="search-icon-container">
-                    <img src="./img/search_icon.svg" alt="search" class = 'search-icon'>
+                    <img src="./img/search-icon-color.png" alt="search" class = 'search-icon' width='50' height='49'>
                   </div>
 
               </form>
@@ -76,39 +76,12 @@
                   <li>
                       <a class="ar" href="ar"><h2>Arabic</h2></a>
                   </li>
-                  <li>
-                      <a class="en" href="en"><h2>English</h2></a>
-                  </li>
               </ul>
             </div>
             <a href="checkout"><img src="img/person.png" alt="Checkout" class="checkout" width="25"></a>
             <a href="profile"><img src="img/shopping_cart.png" alt="Profile" class="profile" width="25"></a>
             <a href="#" class = 'hamburger'><img src="./img/hamburger.svg" alt="hamburger menu"></a>
           </div>
-
-          <!-- <div class="sidebar-menu">
-            <div class="sidebar-categories">
-              <div class="sidebar-category">
-                <div class="category-title">
-                  <h2>BOYS</h2>
-                </div>
-              </div>
-              <div class="sidebar-category">
-                <div class="category-title">
-                  <h2>GIRLS</h2>
-                </div>
-              </div>
-              <div class="sidebar-category">
-                <div class="category-title">
-                  <h2>INFANTS</h2>
-                </div>
-              </div>
-              <div class="sidebar-category">
-                <div class="category-title">
-                  <h2>SALE</h2>
-                </div>
-              </div>
-          </div> -->
 
           </div>
 
@@ -117,9 +90,9 @@
         <div class="header-categories">
           <div class="drop-down">
             <ul>
-                <li><a href="#" class="boys"><h2>BOYS</h2></a>
+                <li><a href="#" class="boys-1"><h2 class="boys" id="boys">BOYS</h2></a>
                   
-              <div class="drop-down-background">
+              <div class="drop-down-background-boys" id="drop-down-background-boys">
                <ul>
                       <li><a href="#" class="clothing">CLOTHING</a>
                  <div class="under-line"></div>
@@ -164,9 +137,9 @@
   
   
                 
-                <li><a href="#" class="boys"><h2>GIRLS</h2></a>
+                <li><a href="#" class="girls-1"><h2 class="girls">GIRLS</h2></a>
                   
-                  <div class="drop-down-background">
+                  <div class="drop-down-background-girls" id="drop-down-background-girls">
                    <ul>
                           <li><a href="#" class="clothing">CLOTHING</a>
                      <div class="under-line"></div>
@@ -189,7 +162,7 @@
                             </li>
                             
                             <ul>
-                              <div class="accessories-div">
+                              <div class="girls-accessories-div">
                               <li><a href="#" class="accessories">ACCESSORIES</a>
                               <div class="under-line"></div>
                               <ul>
@@ -203,9 +176,9 @@
                         </ul>
                           
   
-                        <li><a href="#" class="infants"><h2>INFANTS</h2></a>
+                        <li><a href="#" class="infants-1"><h2 class="infants">INFANTS</h2></a>
                   
-                          <div class="drop-down-background">
+                          <div class="drop-down-background-infants" id="drop-down-background-infants">
                            <ul>
                                   <li><a href="#" class="clothing">CLOTHING</a>
                              <div class="under-line"></div>
@@ -243,9 +216,9 @@
 
 
 
-                                <li><a href="#" class="sale"><h2>SALES</h2></a>
+                                <li><a href="#" class="sales-1"><h2 class="sales">SALES</h2></a>
                   
-                                  <div class="drop-down-background">
+                                  <div class="drop-down-background-sales" id="drop-down-background-sales">
                                    <ul>
                                           <li><a href="#" class="clothing">CLOTHING</a>
                                      <div class="under-line"></div>
@@ -427,7 +400,7 @@
         <!------------- Featured Products Begins ---------------->
         <div class="featured-products reveal">
           <h1>FEATURED PRODUCTS</h1>
-          <div class="featured-products-container">
+          <div class="featured-products-container brand-carousel section-padding owl-carousel">
             <div class="product product-1">
                 <div class="product-image">
                   <div class="primary-image">
@@ -576,7 +549,7 @@
 
         <!-------- Feauterd Brands Begins ---------->
         <h1>shop by brand</h1>
-        <div class="brand-carousel section-padding owl-carousel reveal">
+        <div class="shopy-by-brand brand-carousel section-padding owl-carousel reveal">
             <div class="single-logo">
               <img src="https://i.postimg.cc/QxPJ8hXy/brand-1.png" alt="">
             </div>
@@ -593,7 +566,7 @@
               <img src="https://i.postimg.cc/x8ZM13Sz/brand-5.png" alt="">
             </div>
           <div class="single-logo">
-              <img src="https://i.postimg.cc/B6qxYvgX/brand-3.png" alt="">
+              <img src="https://i.postimg.cc/B6qxYvgX/brand-6.png" alt="">
             </div>
         </div>
         <!-------- Feauterd Brands Ends ---------->
