@@ -106,6 +106,19 @@ header {
 
 #wingLogo {
   cursor: default;
+  padding-bottom: 20;
+}
+
+@media screen and (max-width: 1200px) {
+  #wingLogo {
+    width: 210px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  #wingLogo {
+    margin-left: -70;
+  }
 }
 
 form {
@@ -114,6 +127,7 @@ form {
   border-radius: 0.5rem;
   display: flex;
   justify-content: space-between;
+  width: 330px;
 }
 
 .search-bar {
@@ -185,35 +199,12 @@ input {
   color: black;
 }
 
-/* Sidebar Menu*/
-.hamburger {
-  display: none;
-}
-.sidebar-menu {
-  position: absolute;
-  right: 0;
-  top: 2%;
-}
 
-.sidebar-category {
-  border-bottom: 1px dashed #9aaebb;
-  width: 25rem;
-  height: 5.4rem;
-  padding: 0 0.8rem 0.2rem 0.8rem;
-  margin-right: 1.2rem;
-  position: relative;
-}
-
-.sidebar-category .category-title {
-  position: absolute;
-  bottom: 0;
-}
-
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 650px) {
   .header-top {
-    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
   }
-  
 }
 
 /* Header Ends 
@@ -316,16 +307,185 @@ ul li:hover .drop-down-background-sales{
   margin-left: 400px;
 }
 
-@media screen and (max-width: 1300px) {
-  
+@media screen and (max-width: 1200px) {
+  .drop-down {
+    display: none;
+  }
 }
 
 /* Header Categories Drop Down Ends
 -----------------------------------------*/
 
+/* Sidebar Menu Begins
+----------------------------*/
+.hamburger {
+  display: none;
+}
+
+.hamburger-img {
+  width: 30px;
+}
+
+.sidebar-menu {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  background-color: #f4f4f4;
+  z-index: 2;
+  width: 66%;
+  max-width: 35rem;
+  height: 100%;
+  padding: 2rem 2rem 0 2rem;
+}
+.sidebar-menu .close-sidemenu-button {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+}
+
+.sidebar-menu .close-sidemenu-button img {
+  cursor: pointer;
+}
+
+.sidebar-category {
+  border-bottom: 1px dashed #9aaebb;
+  /* width: 25rem; */
+  /* min-height: 5.4rem; */
+  padding: 0 0.8rem 0.2rem 0.8rem;
+  margin-right: 1.2rem;
+}
+
+.sidebar-category .collapsible-button {
+  width: 100%;
+  cursor: pointer;
+}
+
+.sidebar-category > .collapsible-button {
+  padding-top: 2.4rem;
+}
+
+.collapsible-button {
+  position: relative;
+}
+
+.sidebar-category .sidebar-category-title {
+  color: #006080;
+}
+
+.sidebar-category > .collapsible-button::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  color: #006080;
+}
+
+/* Active state */
+.sidebar-category.active > .collapsible-button::after {
+  content: "-";
+  background-clip: text;
+  background: linear-gradient(89.9deg, #5fcae8 0.12%, #ed65a0 99.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(102, 126, 141, 0.1);
+}
+
+.sidebar-subcategories .sidebar-subcategory-title > *,
+.sidebar-subcategories .expand > * {
+  color: #667e8d;
+}
+
+.sidebar-subcategories {
+  padding: 1.8rem 0 0 1rem;
+  width: 100%;
+}
+
+.sidebar-subcategories .sidebar-subcategory {
+  padding-bottom: 1.8rem;
+}
+
+/* .sidebar-menu .active .sidebar-category-title,
+.sidebar-menu .active button, 
+.sidebar-menu .active  */
+.sidebar-menu .sidebar-subcategories {
+  display: none;
+}
+
+.sidebar-menu .active > .collapsible-button .sidebar-category-title > * {
+  background-clip: text;
+  background: linear-gradient(89.9deg, #5fcae8 0.12%, #ed65a0 99.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(102, 126, 141, 0.1);
+  display: inline-block;
+  /* -webkit-text-fill-color: transparent; */
+}
+
+.sidebar-menu .active .sidebar-subcategories {
+  display: inline-block;
+}
+
+.sidebar-menu .sidebar-subcategories ul {
+  padding: 0;
+  border-left: 1px solid #667e8d;
+  padding-left: 1rem;
+  margin-left: 2rem;
+  margin-top: 1.8rem;
+}
+
+.sidebar-menu .sidebar-subcategories ul > li {
+  padding-bottom: 1rem;
+}
+.sidebar-menu .sidebar-subcategories ul > li:last-child {
+  padding-bottom: 0;
+}
+.sidebar-menu .sidebar-subcategories ul > li p {
+  color: #667e8d;
+}
+
+/* paragraph tag for now. */
+.sidebar-menu .sidebar-subcategories ul > li p:hover {
+  background-clip: text;
+  background: linear-gradient(89.9deg, #5fcae8 0.12%, #ed65a0 99.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(102, 126, 141, 0.1);
+  display: inline-block;
+}
+
+.sidebar-subcategory > .collapsible-button::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 2.4rem;
+  font-family: "Poppins", sans-serif;
+  color: #667e8d;
+}
+
+.sidebar-subcategory.active > .collapsible-button::after {
+  content: "-";
+}
+.sidebar-menu .sidebar-subcategory ul {
+  display: none;
+}
+.sidebar-menu .sidebar-subcategory.active ul {
+  display: inline-block;
+}
+@media screen and (max-width: 1200px) {
+  .hamburger {
+    display: block;
+    top: 10%;
+    left: 5%;
+    position: absolute;
+  }
+}
+/* Sidebar Menu Ends
+----------------------------*/
+
 /* Language Menu Begins 
 --------------------------- */
-.options {
+.options, .options-mobile {
   display: flex;
   align-items: center;
   column-gap: 2rem;
@@ -386,6 +546,11 @@ ul li:hover .drop-down-background-sales{
     position:absolute;
     top:0;
     right:0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .options {
+    display: none;
   }
 }
 /* Language Menu Ends 
@@ -501,6 +666,13 @@ hr, .under-line {
     max-width: 1846px;
   }
 }
+@media screen and (max-width:630px) {
+  .single-dot.active {
+    width: 14px;
+    height: 14px;
+  }
+}
+
 /* Slider Ends
 ------------------- */
 
@@ -525,7 +697,17 @@ hr, .under-line {
 }
 
 
+@media screen and (max-width:900px) {
+  .down-arrow {
+    width: 4rem;
+  }
+}
 
+@media screen and (max-width:630px) {
+  .down-arrow {
+    width: 3rem;
+  }
+}
 /* Shop by Categories Begins 
 ------------------------------- */
 
@@ -578,6 +760,7 @@ hr, .under-line {
   flex-flow: row wrap;
   justify-content: flex-start;
   row-gap: 6rem;
+  column-gap: 6rem;
   margin-top: 8rem;
   margin-bottom: 15.8rem;
   padding: 40px calc((100% - (255px * 3)) / 2);
@@ -739,9 +922,6 @@ hr,
 }
 
 @media screen and (max-width: 760px) {
-  .hamburger {
-    display: block;
-  }
   .featured-products-container .product {
     flex: 0 0 50%;
   }
