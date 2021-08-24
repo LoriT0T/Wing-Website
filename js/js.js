@@ -237,3 +237,73 @@ $(".brand-carousel").owlCarousel({
 
 /* Java Script for Brands Slider Ends 
  -------------------------------------------*/
+
+/* Hamburger Menu Begin
+ -------------------------------*/
+ sidebarMenu = document.querySelector(".sidebar-menu");
+ overlay = document.querySelector(".overlay");
+ hamburger = document.querySelector(".hamburger");
+
+ 
+ hamburger.addEventListener('click', e => {
+   sidebarMenu.classList.remove('hidden')
+   overlay.classList.remove('hidden')
+ })
+
+ document.querySelectorAll('.sidebar-menu .sidebar-category > .collapsible-button').forEach(x=>{
+   x.addEventListener('click', (e)=>{        
+     // Parent element is the sidebar category
+     sidebarMenuCategory = x.parentElement
+     currentActiveCategory = document.querySelector('.sidebar-category.active')
+     // Check if the currentActive category is the same as the clicked category
+     // If not then deactivate active category and subcategory.
+     if (currentActiveCategory && currentActiveCategory != sidebarMenuCategory){
+       // Deactivate active category and subcategory
+       currentActiveCategory.querySelector('.active')?.classList.remove('active')
+       currentActiveCategory.classList.remove('active')
+     }
+     sidebarMenuCategory.classList.toggle('active')
+   })
+ })
+
+ document.querySelectorAll('.sidebar-menu .sidebar-subcategory > .collapsible-button').forEach(x => {
+   x.addEventListener('click', (e)=>{
+     sidebarMenuSubcategory = x.parentElement
+     currentActiveSubcategory = document.querySelector('.sidebar-subcategory.active')
+
+     if (currentActiveSubcategory && currentActiveSubcategory != sidebarMenuSubcategory){
+       currentActiveSubcategory.classList.remove('active')
+     }
+     
+     sidebarMenuSubcategory.classList.toggle('active')
+   })
+ });
+
+ // You can close the side menu by clicking the x-button or anywhere other than the sidemenu
+
+ document.querySelector('.close-sidemenu-button img').addEventListener('click', (e)=>{
+   closeSidebarMenu()
+ })
+
+ overlay.addEventListener('click', (e)=>{
+   closeSidebarMenu()
+ })
+
+ function closeSidebarMenu(){
+   document.querySelectorAll('.sidebar-menu .active').forEach(activeElement=>{
+     activeElement.classList.remove('active')
+   })
+   sidebarMenu.classList.add('hidden')
+   overlay.classList.add('hidden')
+ }
+ 
+ function mediaCloseSidebarMenu(){
+   if (x.matches){
+     closeSidebarMenu()
+   }
+ }
+ window.matchMedia("(max-width: 760px)")
+ x.addListener(mediaCloseSidebarMenu)
+ /* Hamburger Menu Ends
+ -------------------------------*/
+
