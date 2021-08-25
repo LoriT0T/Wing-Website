@@ -218,7 +218,7 @@ function reveal() {
 $(".brand-carousel").owlCarousel({
   loop: false,
   margin: 10,
-  autoplay: true,
+  autoplay: false,
   responsive: {
     0: {
       items: 1,
@@ -297,13 +297,13 @@ $(".brand-carousel").owlCarousel({
    overlay.classList.add('hidden')
  }
  
- function mediaCloseSidebarMenu(){
-   if (x.matches){
-     closeSidebarMenu()
-   }
- }
- window.matchMedia("(max-width: 760px)")
- x.addListener(mediaCloseSidebarMenu)
+ function mediaCloseSidebarMenu(x){
+  if (x.matches){
+    closeSidebarMenu()
+  }
+}
+window.matchMedia("(min-width: 1100px)").addListener(mediaCloseSidebarMenu)
  /* Hamburger Menu Ends
  -------------------------------*/
+ 
 
